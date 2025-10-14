@@ -1,0 +1,1 @@
+arrayname.length ===> gives length of array
