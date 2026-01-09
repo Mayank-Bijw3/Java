@@ -13,13 +13,33 @@ class BinaryTree{
 Node root; //only refrence
 
 public void insert(int data){
+    root=insertRec(root,data);
+}
+
+public Node insertRec(Node root,int data){
 
     if(root==null)
-        root = new Node(data);  //object declare and assign using constructor
+        return new Node(data);  //object declare and assign using constructor
 
-    else if(data < root.data){
-        root.left.data = data;
+    if(data < root.data){
+        root.left = insertRec(root.left,data);
     }
+    else{
+        root.right = insertRec(root.right,data);
+    }
+    return root;
+}
+
+
+public void display(Node root){
+    if(root==null){
+        return;
+    }
+
+    System.out.print(root.data+" ");
+    display(root.left);
+    display(root.right);
+
 }
 }
 
@@ -30,5 +50,10 @@ public class Tree {
 
         tree.insert(8);
         tree.insert(7);
+        tree.insert(3);
+        tree.insert(4);
+        tree.insert(1);
+
+        tree.display(tree.root);
     }
 }

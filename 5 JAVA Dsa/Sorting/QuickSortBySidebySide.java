@@ -1,10 +1,10 @@
-public class QuickSort {
+public class QuickSortBySidebySide {
 
     public static void main(String[] args) {
         int arr[]={5,10,7,2,3,4,9,8,1,6};
-        int size=arr.length;
+        int size=arr.length-1;
 
-        quickSort(arr,0,arr.length-1);
+        quickSort(arr,0,size);
 
         for(int k:arr)
             System.out.print(k+" ");
