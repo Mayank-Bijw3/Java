@@ -36,7 +36,7 @@ public class RunTimePoly {
         obj = new MiniPc();
         obj.show();
 
-        obj = new Mobile(); // not extending (inheriting parent class)
+        //obj = new Mobile(); // not extending (inheriting parent class)
         obj.show();
     }
 }
